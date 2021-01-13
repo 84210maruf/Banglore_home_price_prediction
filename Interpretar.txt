@@ -1,0 +1,4 @@
+''''''''''''''''''project_interpreter'''''''''''''''''
+
+
+Python 3.8 (Banglore_home_price_project_flask) C:\ProgramData\Anaconda3\envs\Banglore_home_price_project_flask\python.exe

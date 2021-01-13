@@ -1,0 +1,1111 @@
+Maruf Ahmed@DESKTOP-NLJRQ4E MINGW64 ~/.ssh
+$ ssh -i "bhp.pem" ubuntu@ec2-3-138-192-240.us-east-2.compute.amazonaws.com
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-1029-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat Dec  5 10:25:41 UTC 2020
+
+  System load:  0.0               Processes:             100
+  Usage of /:   17.0% of 7.69GB   Users logged in:       0
+  Memory usage: 20%               IPv4 address for eth0: 172.31.46.35
+  Swap usage:   0%
+
+
+1 update can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+Last login: Sat Dec  5 10:15:09 2020 from 103.210.18.111
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@ip-172-31-46-35:~$ pwd
+/home/ubuntu
+ubuntu@ip-172-31-46-35:~$ ls
+Banglore_home_price_project_flask
+ubuntu@ip-172-31-46-35:~$ sudo apt-get update
+Hit:1 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+Get:4 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+Get:5 http://security.ubuntu.com/ubuntu focal-security InRelease [109 kB]
+Get:6 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/universe Translation-en [5124 kB]
+Get:7 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 c-n-f Metadata [265 kB]
+Get:8 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [144 kB]
+Get:9 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/multiverse Translation-en [104 kB]
+Get:10 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/multiverse amd64 c-n-f Metadata [9136 B]
+Get:11 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [691 kB]
+Get:12 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [171 kB]
+Get:13 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [11.2 kB]
+Get:14 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [103 kB]
+Get:15 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [15.8 kB]
+Get:16 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [700 kB]
+Get:17 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [137 kB]
+Get:18 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [13.4 kB]
+Get:19 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [19.9 kB]
+Get:20 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [4668 B]
+Get:21 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [552 B]
+Get:22 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [112 B]
+Get:23 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:24 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [3988 B]
+Get:25 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [1448 B]
+Get:26 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [224 B]
+Get:27 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-backports/multiverse amd64 c-n-f Metadata [116 B]
+Get:28 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [391 kB]
+Get:29 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [88.9 kB]
+Get:30 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [5524 B]Get:31 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [80.6 kB]
+Get:32 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [12.8 kB]
+Get:33 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [519 kB]
+Get:34 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [68.0 kB]
+Get:35 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [9364 B]
+Get:36 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [1256 B]Get:37 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [540 B]
+Get:38 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [116 B]
+Fetched 17.6 MB in 3s (5627 kB/s)
+Reading package lists... Done
+ubuntu@ip-172-31-46-35:~$ ls
+Banglore_home_price_project_flask
+ubuntu@ip-172-31-46-35:~$ sudo apt-get install nginx
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  fontconfig-config fonts-dejavu-core libfontconfig1 libgd3 libjbig0 libjpeg-turbo8
+  libjpeg8 libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter
+  libnginx-mod-mail libnginx-mod-stream libtiff5 libwebp6 libxpm4 nginx-common
+  nginx-core
+Suggested packages:
+  libgd-tools fcgiwrap nginx-doc ssl-cert
+The following NEW packages will be installed:
+  fontconfig-config fonts-dejavu-core libfontconfig1 libgd3 libjbig0 libjpeg-turbo8
+  libjpeg8 libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter
+  libnginx-mod-mail libnginx-mod-stream libtiff5 libwebp6 libxpm4 nginx nginx-common
+  nginx-core
+0 upgraded, 17 newly installed, 0 to remove and 54 not upgraded.
+Need to get 2431 kB of archives.
+After this operation, 7891 kB of additional disk space will be used.
+Do you want to continue? [Y/n] yes
+Get:1 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/main amd64 fonts-dejavu-core all 2.37-1 [1041 kB]
+Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/main amd64 fontconfig-config all 2.13.1-2ubuntu3 [28.8 kB]
+Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libfontconfig1 amd64 2.13.1-2ubuntu3 [114 kB]
+Get:4 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libjpeg-turbo8 amd64 2.0.3-0ubuntu1.20.04.1 [117 kB]
+Get:5 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libjpeg8 amd64 8c-2ubuntu8 [2194 B]
+Get:6 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libjbig0 amd64 2.1-3.1build1 [26.7 kB]
+Get:7 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libwebp6 amd64 0.6.1-2 [185 kB]
+Get:8 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libtiff5 amd64 4.1.0+git191117-2build1 [161 kB]
+Get:9 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libxpm4 amd64 1:3.5.12-1 [34.0 kB]
+Get:10 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libgd3 amd64 2.2.5-5.2ubuntu2 [118 kB]
+Get:11 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx-common all 1.18.0-0ubuntu1 [37.3 kB]
+Get:12 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-http-image-filter amd64 1.18.0-0ubuntu1 [14.3 kB]
+Get:13 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-http-xslt-filter amd64 1.18.0-0ubuntu1 [12.6 kB]
+Get:14 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-mail amd64 1.18.0-0ubuntu1 [42.3 kB]
+Get:15 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-stream amd64 1.18.0-0ubuntu1 [66.9 kB]
+Get:16 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx-core amd64 1.18.0-0ubuntu1 [425 kB]
+Get:17 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx all 1.18.0-0ubuntu1 [3624 B]
+Fetched 2431 kB in 0s (26.0 MB/s)
+Preconfiguring packages ...
+Selecting previously unselected package fonts-dejavu-core.
+(Reading database ... 59940 files and directories currently installed.)
+Preparing to unpack .../00-fonts-dejavu-core_2.37-1_all.deb ...
+Unpacking fonts-dejavu-core (2.37-1) ...
+Selecting previously unselected package fontconfig-config.
+Preparing to unpack .../01-fontconfig-config_2.13.1-2ubuntu3_all.deb ...
+Unpacking fontconfig-config (2.13.1-2ubuntu3) ...
+Selecting previously unselected package libfontconfig1:amd64.
+Preparing to unpack .../02-libfontconfig1_2.13.1-2ubuntu3_amd64.deb ...
+Unpacking libfontconfig1:amd64 (2.13.1-2ubuntu3) ...
+Selecting previously unselected package libjpeg-turbo8:amd64.
+Preparing to unpack .../03-libjpeg-turbo8_2.0.3-0ubuntu1.20.04.1_amd64.deb ...
+Unpacking libjpeg-turbo8:amd64 (2.0.3-0ubuntu1.20.04.1) ...
+Selecting previously unselected package libjpeg8:amd64.
+Preparing to unpack .../04-libjpeg8_8c-2ubuntu8_amd64.deb ...
+Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...
+Selecting previously unselected package libjbig0:amd64.
+Preparing to unpack .../05-libjbig0_2.1-3.1build1_amd64.deb ...
+Unpacking libjbig0:amd64 (2.1-3.1build1) ...
+Selecting previously unselected package libwebp6:amd64.
+Preparing to unpack .../06-libwebp6_0.6.1-2_amd64.deb ...
+Unpacking libwebp6:amd64 (0.6.1-2) ...
+Selecting previously unselected package libtiff5:amd64.
+Preparing to unpack .../07-libtiff5_4.1.0+git191117-2build1_amd64.deb ...
+Unpacking libtiff5:amd64 (4.1.0+git191117-2build1) ...
+Selecting previously unselected package libxpm4:amd64.
+Preparing to unpack .../08-libxpm4_1%3a3.5.12-1_amd64.deb ...
+Unpacking libxpm4:amd64 (1:3.5.12-1) ...
+Selecting previously unselected package libgd3:amd64.
+Preparing to unpack .../09-libgd3_2.2.5-5.2ubuntu2_amd64.deb ...
+Unpacking libgd3:amd64 (2.2.5-5.2ubuntu2) ...
+Selecting previously unselected package nginx-common.
+Preparing to unpack .../10-nginx-common_1.18.0-0ubuntu1_all.deb ...
+Unpacking nginx-common (1.18.0-0ubuntu1) ...
+Selecting previously unselected package libnginx-mod-http-image-filter.
+Preparing to unpack .../11-libnginx-mod-http-image-filter_1.18.0-0ubuntu1_amd64.deb ...
+Unpacking libnginx-mod-http-image-filter (1.18.0-0ubuntu1) ...
+Selecting previously unselected package libnginx-mod-http-xslt-filter.
+Preparing to unpack .../12-libnginx-mod-http-xslt-filter_1.18.0-0ubuntu1_amd64.deb ...
+Unpacking libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1) ...
+Selecting previously unselected package libnginx-mod-mail.
+Preparing to unpack .../13-libnginx-mod-mail_1.18.0-0ubuntu1_amd64.deb ...
+Unpacking libnginx-mod-mail (1.18.0-0ubuntu1) ...
+Selecting previously unselected package libnginx-mod-stream.
+Preparing to unpack .../14-libnginx-mod-stream_1.18.0-0ubuntu1_amd64.deb ...
+Unpacking libnginx-mod-stream (1.18.0-0ubuntu1) ...
+Selecting previously unselected package nginx-core.
+Preparing to unpack .../15-nginx-core_1.18.0-0ubuntu1_amd64.deb ...
+Unpacking nginx-core (1.18.0-0ubuntu1) ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../16-nginx_1.18.0-0ubuntu1_all.deb ...
+Unpacking nginx (1.18.0-0ubuntu1) ...
+Setting up libxpm4:amd64 (1:3.5.12-1) ...
+Setting up nginx-common (1.18.0-0ubuntu1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /lib/systemd/system/nginx.service.
+Setting up libjbig0:amd64 (2.1-3.1build1) ...
+Setting up libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1) ...
+Setting up libwebp6:amd64 (0.6.1-2) ...
+Setting up fonts-dejavu-core (2.37-1) ...
+Setting up libjpeg-turbo8:amd64 (2.0.3-0ubuntu1.20.04.1) ...
+Setting up libjpeg8:amd64 (8c-2ubuntu8) ...
+Setting up libnginx-mod-mail (1.18.0-0ubuntu1) ...
+Setting up fontconfig-config (2.13.1-2ubuntu3) ...
+Setting up libnginx-mod-stream (1.18.0-0ubuntu1) ...
+Setting up libtiff5:amd64 (4.1.0+git191117-2build1) ...
+Setting up libfontconfig1:amd64 (2.13.1-2ubuntu3) ...
+Setting up libgd3:amd64 (2.2.5-5.2ubuntu2) ...
+Setting up libnginx-mod-http-image-filter (1.18.0-0ubuntu1) ...
+Setting up nginx-core (1.18.0-0ubuntu1) ...
+Setting up nginx (1.18.0-0ubuntu1) ...
+Processing triggers for ufw (0.36-6) ...
+Processing triggers for systemd (245.4-4ubuntu3.2) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.1) ...
+ubuntu@ip-172-31-46-35:~$ ls
+Banglore_home_price_project_flask
+ubuntu@ip-172-31-46-35:~$ sudo service nginx status
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2020-12-05 16:15:06 UTC; 2min 18s ago
+       Docs: man:nginx(8)
+   Main PID: 4099 (nginx)
+      Tasks: 2 (limit: 1164)
+     Memory: 6.6M
+     CGroup: /system.slice/nginx.service
+             ├─4099 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;             └─4100 nginx: worker process
+
+Dec 05 16:15:06 ip-172-31-46-35 systemd[1]: Starting A high performance web server and a >Dec 05 16:15:06 ip-172-31-46-35 systemd[1]: Started A high performance web server and a r>lines 1-13/13 (END)...skipping...
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2020-12-05 16:15:06 UTC; 2min 18s ago
+       Docs: man:nginx(8)
+   Main PID: 4099 (nginx)
+      Tasks: 2 (limit: 1164)
+     Memory: 6.6M
+     CGroup: /system.slice/nginx.service
+             ├─4099 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+             └─4100 nginx: worker process
+
+Dec 05 16:15:06 ip-172-31-46-35 systemd[1]: Starting A high performance web server and a reverse proxy server...
+Dec 05 16:15:06 ip-172-31-46-35 systemd[1]: Started A high performance web server and a reverse proxy server.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-13/13 (END)                                                                       ● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2020-12-05 16:15:06 UTC; 2min 18s ago
+       Docs: man:nginx(8)
+   Main PID: 4099 (nginx)
+      Tasks: 2 (limit: 1164)
+     Memory: 6.6M
+     CGroup: /system.slice/nginx.service
+             ├─4099 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;             └─4100 nginx: worker process
+
+Dec 05 16:15:06 ip-172-31-46-35 systemd[1]: Starting A high performance web server and a >Dec 05 16:15:06 ip-172-31-46-35 systemd[1]: Started A high performance web server and a r>~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-13/13 (END)
+Maruf Ahmed@DESKTOP-NLJRQ4E MINGW64 ~/.ssh
+$ ssh -i "bhp.pem" ubuntu@ec2-3-138-192-240.us-east-2.compute.amazonaws.com
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-1029-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat Dec  5 16:20:02 UTC 2020
+
+  System load:  0.01              Processes:             111
+  Usage of /:   26.1% of 7.69GB   Users logged in:       0
+  Memory usage: 24%               IPv4 address for eth0: 172.31.46.35
+  Swap usage:   0%
+
+ * Introducing self-healing high availability clusters in MicroK8s.
+   Simple, hardened, Kubernetes for production, from RaspberryPi to DC.
+
+     https://microk8s.io/high-availability
+
+58 updates can be installed immediately.
+25 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Sat Dec  5 10:25:42 2020 from 103.210.18.111
+ubuntu@ip-172-31-46-35:~$ ls
+Banglore_home_price_project_flask
+ubuntu@ip-172-31-46-35:~$ cd /etc/nginx/
+ubuntu@ip-172-31-46-35:/etc/nginx$ ll
+total 72
+drwxr-xr-x  8 root root 4096 Dec  5 16:15 ./
+drwxr-xr-x 93 root root 4096 Dec  5 16:15 ../
+drwxr-xr-x  2 root root 4096 Apr 21  2020 conf.d/
+-rw-r--r--  1 root root 1077 Feb  4  2019 fastcgi.conf
+-rw-r--r--  1 root root 1007 Feb  4  2019 fastcgi_params
+-rw-r--r--  1 root root 2837 Feb  4  2019 koi-utf
+-rw-r--r--  1 root root 2223 Feb  4  2019 koi-win
+-rw-r--r--  1 root root 3957 Feb  4  2019 mime.types
+drwxr-xr-x  2 root root 4096 Apr 21  2020 modules-available/
+drwxr-xr-x  2 root root 4096 Dec  5 16:15 modules-enabled/
+-rw-r--r--  1 root root 1490 Feb  4  2019 nginx.conf
+-rw-r--r--  1 root root  180 Feb  4  2019 proxy_params
+-rw-r--r--  1 root root  636 Feb  4  2019 scgi_params
+drwxr-xr-x  2 root root 4096 Dec  5 16:15 sites-available/
+drwxr-xr-x  2 root root 4096 Dec  5 16:15 sites-enabled/
+drwxr-xr-x  2 root root 4096 Dec  5 16:15 snippets/
+-rw-r--r--  1 root root  664 Feb  4  2019 uwsgi_params
+-rw-r--r--  1 root root 3071 Feb  4  2019 win-utf
+ubuntu@ip-172-31-46-35:/etc/nginx$ less nginx.conf
+
+[1]+  Stopped                 less nginx.conf
+ubuntu@ip-172-31-46-35:/etc/nginx$ less nginx.conf
+
+[1]+  Stopped                 less sites-enabled/default
+ubuntu@ip-172-31-46-35:/etc/nginx$ sudo service nginx status
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2020-12-05 16:15:06 UTC; 31min ago
+       Docs: man:nginx(8)
+   Main PID: 4099 (nginx)
+      Tasks: 2 (limit: 1164)
+     Memory: 6.6M
+     CGroup: /system.slice/nginx.service
+             ├─4099 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;             └─4100 nginx: worker process
+
+Dec 05 16:15:06 ip-172-31-46-35 systemd[1]: Starting A high performance web server and a >Dec 05 16:15:06 ip-172-31-46-35 systemd[1]: Started A high performance web server and a r>lines 1-13/13 (END)
+[2]+  Stopped                 sudo service nginx status
+^Z^Z
+
+ubuntu@ip-172-31-46-35:/etc/nginx$ sudo service nginx status
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2020-12-05 16:15:06 UTC; 32min ago
+       Docs: man:nginx(8)
+   Main PID: 4099 (nginx)
+      Tasks: 2 (limit: 1164)
+     Memory: 6.6M
+     CGroup: /system.slice/nginx.service
+             ├─4099 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;             └─4100 nginx: worker process
+
+Dec 05 16:15:06 ip-172-31-46-35 systemd[1]: Starting A high performance web server and a >Dec 05 16:15:06 ip-172-31-46-35 systemd[1]: Started A high performance web server and a r>lines 1-13/13 (END)
+[3]+  Stopped                 sudo service nginx status
+
+
+ubuntu@ip-172-31-46-35:/etc/nginx$ ll
+total 72
+drwxr-xr-x  8 root root 4096 Dec  5 16:15 ./
+drwxr-xr-x 93 root root 4096 Dec  5 16:15 ../
+drwxr-xr-x  2 root root 4096 Apr 21  2020 conf.d/
+-rw-r--r--  1 root root 1077 Feb  4  2019 fastcgi.conf
+-rw-r--r--  1 root root 1007 Feb  4  2019 fastcgi_params
+-rw-r--r--  1 root root 2837 Feb  4  2019 koi-utf
+-rw-r--r--  1 root root 2223 Feb  4  2019 koi-win
+-rw-r--r--  1 root root 3957 Feb  4  2019 mime.types
+drwxr-xr-x  2 root root 4096 Apr 21  2020 modules-available/
+drwxr-xr-x  2 root root 4096 Dec  5 16:15 modules-enabled/
+-rw-r--r--  1 root root 1490 Feb  4  2019 nginx.conf
+-rw-r--r--  1 root root  180 Feb  4  2019 proxy_params
+-rw-r--r--  1 root root  636 Feb  4  2019 scgi_params
+drwxr-xr-x  2 root root 4096 Dec  5 16:15 sites-available/
+drwxr-xr-x  2 root root 4096 Dec  5 16:15 sites-enabled/
+drwxr-xr-x  2 root root 4096 Dec  5 16:15 snippets/
+-rw-r--r--  1 root root  664 Feb  4  2019 uwsgi_params
+-rw-r--r--  1 root root 3071 Feb  4  2019 win-utf
+ubuntu@ip-172-31-46-35:/etc/nginx$ less nginx.conf
+
+[4]+  Stopped                 less nginx.conf
+ubuntu@ip-172-31-46-35:/etc/nginx$ less sites-enabled/default
+
+[5]+  Stopped                 less sites-enabled/default
+ubuntu@ip-172-31-46-35:/etc/nginx$ less /var/www/html/index.nginx-debian.html
+
+[6]+  Stopped                 less /var/www/html/index.nginx-debian.html
+ubuntu@ip-172-31-46-35:/etc/nginx$ cd sites-enabled/
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 16:15 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+lrwxrwxrwx 1 root root   34 Dec  5 16:15 default -> /etc/nginx/sites-available/default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ls
+default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo unlink default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 16:52 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ cd ../sites-available/
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ ll
+total 12
+drwxr-xr-x 2 root root 4096 Dec  5 16:15 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+-rw-r--r-- 1 root root 2416 Mar 26  2020 default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo vim bhp.conf
+
+[1]+  Stopped                 sudo vim bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo vim bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ cd ../sites-enable/
+-bash: cd: ../sites-enable/: No such file or directory
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ cd ../sites-enabled/
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 16:52 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ cd ../sites-available/
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ ls
+bhp.conf  default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ ll
+total 52
+drwxr-xr-x 2 root root  4096 Dec  5 17:32 ./
+drwxr-xr-x 8 root root  4096 Dec  5 16:15 ../
+-rw------- 1 root root 12288 Dec  5 17:09 .bhp.conf.swn
+-rw------- 1 root root 12288 Dec  5 17:11 .bhp.conf.swo
+-rw------- 1 root root 12288 Dec  5 16:58 .bhp.conf.swp
+-rw-r--r-- 1 root root   193 Dec  5 17:32 bhp.conf
+-rw-r--r-- 1 root root  2416 Mar 26  2020 default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ cd ../sites-enabled/
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ cd ../sites-available/
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ ls
+bhp.conf  default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ ll
+total 52
+drwxr-xr-x 2 root root  4096 Dec  5 17:32 ./
+drwxr-xr-x 8 root root  4096 Dec  5 16:15 ../
+-rw------- 1 root root 12288 Dec  5 17:09 .bhp.conf.swn
+-rw------- 1 root root 12288 Dec  5 17:11 .bhp.conf.swo
+-rw------- 1 root root 12288 Dec  5 16:58 .bhp.conf.swp
+-rw-r--r-- 1 root root   193 Dec  5 17:32 bhp.conf
+-rw-r--r-- 1 root root  2416 Mar 26  2020 default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo unlink .bhp.conf.swn
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ ll
+total 40
+drwxr-xr-x 2 root root  4096 Dec  5 17:44 ./
+drwxr-xr-x 8 root root  4096 Dec  5 16:15 ../
+-rw------- 1 root root 12288 Dec  5 17:11 .bhp.conf.swo
+-rw------- 1 root root 12288 Dec  5 16:58 .bhp.conf.swp
+-rw-r--r-- 1 root root   193 Dec  5 17:32 bhp.conf
+-rw-r--r-- 1 root root  2416 Mar 26  2020 default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo unlink .bhp.conf.swo
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo unlink .bhp.conf.swp
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ ll bhp.conf
+-rw-r--r-- 1 root root 193 Dec  5 17:32 bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ ll
+total 16
+drwxr-xr-x 2 root root 4096 Dec  5 17:45 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+-rw-r--r-- 1 root root  193 Dec  5 17:32 bhp.conf
+-rw-r--r-- 1 root root 2416 Mar 26  2020 default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ cd ../sites-enabled/
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ln -v -s /etc/nginx/sites-available/bhp.conf inside /etc/nginx/sites-enabled
+ln: failed to create symbolic link '/etc/nginx/sites-enabled/bhp.conf': Permission denied
+ln: failed to create symbolic link '/etc/nginx/sites-enabled/inside': Permission denied
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 16:52 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo ln -v -s /etc/nginx/sites-available/bhp.conf inside /etc/nginx/sites-enabled
+'/etc/nginx/sites-enabled/bhp.conf' -> '/etc/nginx/sites-available/bhp.conf'
+'/etc/nginx/sites-enabled/inside' -> 'inside'
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 17:49 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+lrwxrwxrwx 1 root root   35 Dec  5 17:49 bhp.conf -> /etc/nginx/sites-available/bhp.conf
+lrwxrwxrwx 1 root root    6 Dec  5 17:49 inside -> inside
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx restert
+Usage: nginx {start|stop|restart|reload|force-reload|status|configtest|rotate|upgrade}
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx restart
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx status
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2020-12-05 17:52:02 UTC; 1min 17s ago
+       Docs: man:nginx(8)
+    Process: 16355 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (c>
+Dec 05 17:52:02 ip-172-31-46-35 systemd[1]: Starting A high performance web server and a >Dec 05 17:52:02 ip-172-31-46-35 nginx[16355]: nginx: [emerg] unknown directive "erver" in>Dec 05 17:52:02 ip-172-31-46-35 nginx[16355]: nginx: configuration file /etc/nginx/nginx.>Dec 05 17:52:02 ip-172-31-46-35 systemd[1]: nginx.service: Control process exited, code=e>Dec 05 17:52:02 ip-172-31-46-35 systemd[1]: nginx.service: Failed with result 'exit-code'.Dec 05 17:52:02 ip-172-31-46-35 systemd[1]: Failed to start A high performance web server>lines 1-12/12 (END)
+[1]+  Stopped                 sudo service nginx status
+
+
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 17:49 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+lrwxrwxrwx 1 root root   35 Dec  5 17:49 bhp.conf -> /etc/nginx/sites-available/bhp.conf
+lrwxrwxrwx 1 root root    6 Dec  5 17:49 inside -> inside
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ls
+bhp.conf  inside
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 17:49 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+lrwxrwxrwx 1 root root   35 Dec  5 17:49 bhp.conf -> /etc/nginx/sites-available/bhp.conf
+lrwxrwxrwx 1 root root    6 Dec  5 17:49 inside -> inside
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ls
+bhp.conf  inside
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx restart
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ less bhp.conf
+
+[2]+  Stopped                 less bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ unlink bhp.conf
+unlink: cannot unlink 'bhp.conf': Permission denied
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 17:49 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+lrwxrwxrwx 1 root root   35 Dec  5 17:49 bhp.conf -> /etc/nginx/sites-available/bhp.conf
+lrwxrwxrwx 1 root root    6 Dec  5 17:49 inside -> inside
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx restart
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo fuser -k 80/tcp
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 17:49 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+lrwxrwxrwx 1 root root   35 Dec  5 17:49 bhp.conf -> /etc/nginx/sites-available/bhp.conf
+lrwxrwxrwx 1 root root    6 Dec  5 17:49 inside -> inside
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo fuser -k 443/tcp
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx restart
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx start
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ less bhp.conf
+
+[3]+  Stopped                 less bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo unlink bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 18:11 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+lrwxrwxrwx 1 root root    6 Dec  5 17:49 inside -> inside
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo unlink inside -> inside
+-bash: inside: Too many levels of symbolic links
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 18:11 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+lrwxrwxrwx 1 root root    6 Dec  5 17:49 inside -> inside
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo unlink inside
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 18:12 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ cd ../sites-available/
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ ll
+total 16
+drwxr-xr-x 2 root root 4096 Dec  5 17:45 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+-rw-r--r-- 1 root root  193 Dec  5 17:32 bhp.conf
+-rw-r--r-- 1 root root 2416 Mar 26  2020 default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo unlink bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ ll
+total 12
+drwxr-xr-x 2 root root 4096 Dec  5 18:15 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+-rw-r--r-- 1 root root 2416 Mar 26  2020 default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo vim bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ ll
+total 16
+drwxr-xr-x 2 root root 4096 Dec  5 18:18 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+-rw-r--r-- 1 root root  193 Dec  5 18:18 bhp.conf
+-rw-r--r-- 1 root root 2416 Mar 26  2020 default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ less bhp.conf
+
+[4]+  Stopped                 less bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ ll
+total 16
+drwxr-xr-x 2 root root 4096 Dec  5 18:18 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+-rw-r--r-- 1 root root  193 Dec  5 18:18 bhp.conf
+-rw-r--r-- 1 root root 2416 Mar 26  2020 default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ cd ../sites-enabled/
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx restart
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx status
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2020-12-05 18:20:32 UTC; 24s ago
+       Docs: man:nginx(8)
+    Process: 16542 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (c>    Process: 16553 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exite>   Main PID: 16554 (nginx)
+      Tasks: 2 (limit: 1164)
+     Memory: 2.6M
+     CGroup: /system.slice/nginx.service
+             ├─16554 nginx: master process /usr/sbin/nginx -g daemon on; master_process o>             └─16555 nginx: worker process
+
+Dec 05 18:20:32 ip-172-31-46-35 systemd[1]: Starting A high performance web server and a >Dec 05 18:20:32 ip-172-31-46-35 systemd[1]: Started A high performance web server and a r>lines 1-15/15 (END)
+[5]+  Stopped                 sudo service nginx status
+
+
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo ln -v -s /etc/nginx/sites-available/bhp.conf inside /etc/nginx/sites-enabled
+'/etc/nginx/sites-enabled/bhp.conf' -> '/etc/nginx/sites-available/bhp.conf'
+'/etc/nginx/sites-enabled/inside' -> 'inside'
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 18:23 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+lrwxrwxrwx 1 root root   35 Dec  5 18:23 bhp.conf -> /etc/nginx/sites-available/bhp.conf
+lrwxrwxrwx 1 root root    6 Dec  5 18:23 inside -> inside
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx restart
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx status
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2020-12-05 18:23:33 UTC; 14s ago
+       Docs: man:nginx(8)
+    Process: 16576 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (c>
+Dec 05 18:23:33 ip-172-31-46-35 systemd[1]: Starting A high performance web server and a >Dec 05 18:23:33 ip-172-31-46-35 nginx[16576]: nginx: [emerg] unknown directive "erver" in>Dec 05 18:23:33 ip-172-31-46-35 nginx[16576]: nginx: configuration file /etc/nginx/nginx.>Dec 05 18:23:33 ip-172-31-46-35 systemd[1]: nginx.service: Control process exited, code=e>Dec 05 18:23:33 ip-172-31-46-35 systemd[1]: nginx.service: Failed with result 'exit-code'.Dec 05 18:23:33 ip-172-31-46-35 systemd[1]: Failed to start A high performance web server>lines 1-12/12 (END)
+[6]+  Stopped                 sudo service nginx status
+
+
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo fuser -k 80/tcp
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo fuser -k 443/tcp
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx restart
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx status
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2020-12-05 18:27:22 UTC; 6s ago
+       Docs: man:nginx(8)
+    Process: 16609 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (c>
+Dec 05 18:27:22 ip-172-31-46-35 systemd[1]: Starting A high performance web server and a >Dec 05 18:27:22 ip-172-31-46-35 nginx[16609]: nginx: [emerg] unknown directive "erver" in>Dec 05 18:27:22 ip-172-31-46-35 nginx[16609]: nginx: configuration file /etc/nginx/nginx.>Dec 05 18:27:22 ip-172-31-46-35 systemd[1]: nginx.service: Control process exited, code=e>Dec 05 18:27:22 ip-172-31-46-35 systemd[1]: nginx.service: Failed with result 'exit-code'.Dec 05 18:27:22 ip-172-31-46-35 systemd[1]: Failed to start A high performance web server>lines 1-12/12 (END)
+[7]+  Stopped                 sudo service nginx status
+
+
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ nginx -t -c /etc/nginx/nginx.conf
+nginx: [alert] could not open error log file: open() "/var/log/nginx/error.log" failed (13: Permission denied)
+2020/12/05 18:28:06 [warn] 16626#16626: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /etc/nginx/nginx.conf:1
+2020/12/05 18:28:06 [emerg] 16626#16626: unknown directive "erver" in /etc/nginx/sites-enabled/bhp.conf:1
+nginx: configuration file /etc/nginx/nginx.conf test failed
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ less nginx.conf
+nginx.conf: No such file or directory
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 18:23 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+lrwxrwxrwx 1 root root   35 Dec  5 18:23 bhp.conf -> /etc/nginx/sites-available/bhp.conf
+lrwxrwxrwx 1 root root    6 Dec  5 18:23 inside -> inside
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ less bhp.conf
+
+[8]+  Stopped                 less bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo vim bhp.conf
+
+[9]+  Stopped                 sudo vim bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx restart
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo fuser -k 80/tcp
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo systemctl start nginx
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo systemctl status nginx.service
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2020-12-05 19:07:34 UTC; 1min 29s ago
+       Docs: man:nginx(8)
+    Process: 16716 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (c>
+Dec 05 19:07:34 ip-172-31-46-35 systemd[1]: Starting A high performance web server and a >Dec 05 19:07:34 ip-172-31-46-35 nginx[16716]: nginx: [emerg] unknown directive "erver" in>Dec 05 19:07:34 ip-172-31-46-35 nginx[16716]: nginx: configuration file /etc/nginx/nginx.>Dec 05 19:07:34 ip-172-31-46-35 systemd[1]: nginx.service: Control process exited, code=e>Dec 05 19:07:34 ip-172-31-46-35 systemd[1]: nginx.service: Failed with result 'exit-code'.Dec 05 19:07:34 ip-172-31-46-35 systemd[1]: Failed to start A high performance web server>lines 1-12/12 (END)...skipping...
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2020-12-05 19:07:34 UTC; 1min 29s ago
+       Docs: man:nginx(8)
+    Process: 16716 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=1/FAILURE)
+
+Dec 05 19:07:34 ip-172-31-46-35 systemd[1]: Starting A high performance web server and a reverse proxy server...
+Dec 05 19:07:34 ip-172-31-46-35 nginx[16716]: nginx: [emerg] unknown directive "erver" in /etc/nginx/sites-enabled/bhp.conf:1
+Dec 05 19:07:34 ip-172-31-46-35 nginx[16716]: nginx: configuration file /etc/nginx/nginx.conf test failed
+Dec 05 19:07:34 ip-172-31-46-35 systemd[1]: nginx.service: Control process exited, code=exited, status=1/FAILURE
+Dec 05 19:07:34 ip-172-31-46-35 systemd[1]: nginx.service: Failed with result 'exit-code'.
+Dec 05 19:07:34 ip-172-31-46-35 systemd[1]: Failed to start A high performance web server and a reverse proxy server.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-12/12 (END)
+[10]+  Stopped                 sudo systemctl status nginx.service
+
+
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ less nginx.conf
+nginx.conf: No such file or directory
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 18:23 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+lrwxrwxrwx 1 root root   35 Dec  5 18:23 bhp.conf -> /etc/nginx/sites-available/bhp.conf
+lrwxrwxrwx 1 root root    6 Dec  5 18:23 inside -> inside
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ less bhp.conf
+
+[11]+  Stopped                 less bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo unlink bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 19:11 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+lrwxrwxrwx 1 root root    6 Dec  5 18:23 inside -> inside
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo unlink inside
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 19:11 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ cd ../sites-available
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ ll
+total 28
+drwxr-xr-x 2 root root  4096 Dec  5 18:44 ./
+drwxr-xr-x 8 root root  4096 Dec  5 16:15 ../
+-rw-r--r-- 1 root root 12288 Dec  5 18:44 .bhp.conf.swp
+-rw-r--r-- 1 root root   193 Dec  5 18:18 bhp.conf
+-rw-r--r-- 1 root root  2416 Mar 26  2020 default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo unlink.bhp.conf.swp
+sudo: unlink.bhp.conf.swp: command not found
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo unlink .bhp.conf.swp
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ ll
+total 16
+drwxr-xr-x 2 root root 4096 Dec  5 19:12 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+-rw-r--r-- 1 root root  193 Dec  5 18:18 bhp.conf
+-rw-r--r-- 1 root root 2416 Mar 26  2020 default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo unlink .bhp.conf
+unlink: cannot unlink '.bhp.conf': No such file or directory
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo unlink bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ ll
+total 12
+drwxr-xr-x 2 root root 4096 Dec  5 19:12 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+-rw-r--r-- 1 root root 2416 Mar 26  2020 default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo vim bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ ll
+total 16
+drwxr-xr-x 2 root root 4096 Dec  5 19:14 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+-rw-r--r-- 1 root root  194 Dec  5 19:14 bhp.conf
+-rw-r--r-- 1 root root 2416 Mar 26  2020 default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ cd ../sites-enabled/
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 19:11 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo ln -v -s /etc/nginx/sites-available/bhp.conf inside /etc/nginx/sites-enabled
+'/etc/nginx/sites-enabled/bhp.conf' -> '/etc/nginx/sites-available/bhp.conf'
+'/etc/nginx/sites-enabled/inside' -> 'inside'
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 19:15 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+lrwxrwxrwx 1 root root   35 Dec  5 19:15 bhp.conf -> /etc/nginx/sites-available/bhp.conf
+lrwxrwxrwx 1 root root    6 Dec  5 19:15 inside -> inside
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx restart
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ less bhp.conf
+
+[12]+  Stopped                 less bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ cd ../sites-available/
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo vim bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo vim bhp.conf
+
+[13]+  Stopped                 sudo vim bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ cd ../sites-enabled/
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ less bhp.conf
+
+[14]+  Stopped                 less bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx restart
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service start nginx
+start: unrecognized service
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx start
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx status
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2020-12-05 19:25:25 UTC; 18s ago
+       Docs: man:nginx(8)
+    Process: 16863 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (c>
+Dec 05 19:25:25 ip-172-31-46-35 systemd[1]: Starting A high performance web server and a >Dec 05 19:25:25 ip-172-31-46-35 nginx[16863]: nginx: [emerg] open() "/etc/nginx/sites-ena>Dec 05 19:25:25 ip-172-31-46-35 nginx[16863]: nginx: configuration file /etc/nginx/nginx.>Dec 05 19:25:25 ip-172-31-46-35 systemd[1]: nginx.service: Control process exited, code=e>Dec 05 19:25:25 ip-172-31-46-35 systemd[1]: nginx.service: Failed with result 'exit-code'.Dec 05 19:25:25 ip-172-31-46-35 systemd[1]: Failed to start A high performance web server>lines 1-12/12 (END)...skipping...
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2020-12-05 19:25:25 UTC; 18s ago
+       Docs: man:nginx(8)
+    Process: 16863 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=1/FAILURE)
+
+Dec 05 19:25:25 ip-172-31-46-35 systemd[1]: Starting A high performance web server and a reverse proxy server...
+Dec 05 19:25:25 ip-172-31-46-35 nginx[16863]: nginx: [emerg] open() "/etc/nginx/sites-enabled/inside" failed (40: Too many levels of symbolic links) in /etc/ng>Dec 05 19:25:25 ip-172-31-46-35 nginx[16863]: nginx: configuration file /etc/nginx/nginx.conf test failed
+Dec 05 19:25:25 ip-172-31-46-35 systemd[1]: nginx.service: Control process exited, code=exited, status=1/FAILURE
+Dec 05 19:25:25 ip-172-31-46-35 systemd[1]: nginx.service: Failed with result 'exit-code'.
+Dec 05 19:25:25 ip-172-31-46-35 systemd[1]: Failed to start A high performance web server and a reverse proxy server.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-12/12 (END)
+[15]+  Stopped                 sudo service nginx status
+
+
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ less bhp.conf
+
+[16]+  Stopped                 less bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ cd ../sites-available/
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo vim bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ cd ../sites-enabled/
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ less bhp.conf
+
+[17]+  Stopped                 less bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx start
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx restart
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx status
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2020-12-05 19:30:45 UTC; 11s ago
+       Docs: man:nginx(8)
+    Process: 16933 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=1/FAILURE)
+
+Dec 05 19:30:45 ip-172-31-46-35 systemd[1]: Starting A high performance web server and a reverse proxy server...
+Dec 05 19:30:45 ip-172-31-46-35 nginx[16933]: nginx: [emerg] open() "/etc/nginx/sites-enabled/inside" failed (40: Too many levels of symbolic links) in /etc/ng>Dec 05 19:30:45 ip-172-31-46-35 nginx[16933]: nginx: configuration file /etc/nginx/nginx.conf test failed
+Dec 05 19:30:45 ip-172-31-46-35 systemd[1]: nginx.service: Control process exited, code=exited, status=1/FAILURE
+Dec 05 19:30:45 ip-172-31-46-35 systemd[1]: nginx.service: Failed with result 'exit-code'.
+Dec 05 19:30:45 ip-172-31-46-35 systemd[1]: Failed to start A high performance web server and a reverse proxy server.
+lines 1-12/12 (END)
+[18]+  Stopped                 sudo service nginx status
+^Z
+
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ cd ../sites-available/
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo vim bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo service nginx restart
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo service nginx status
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2020-12-05 19:32:25 UTC; 5s ago
+       Docs: man:nginx(8)
+    Process: 16959 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=1/FAILURE)
+
+Dec 05 19:32:25 ip-172-31-46-35 systemd[1]: Starting A high performance web server and a reverse proxy server...
+Dec 05 19:32:25 ip-172-31-46-35 nginx[16959]: nginx: [emerg] open() "/etc/nginx/sites-enabled/inside" failed (40: Too many levels of symbolic links) in /etc/ng>Dec 05 19:32:25 ip-172-31-46-35 nginx[16959]: nginx: configuration file /etc/nginx/nginx.conf test failed
+Dec 05 19:32:25 ip-172-31-46-35 systemd[1]: nginx.service: Control process exited, code=exited, status=1/FAILURE
+Dec 05 19:32:25 ip-172-31-46-35 systemd[1]: nginx.service: Failed with result 'exit-code'.
+Dec 05 19:32:25 ip-172-31-46-35 systemd[1]: Failed to start A high performance web server and a reverse proxy server.
+lines 1-12/12 (END)
+[19]+  Stopped                 sudo service nginx status
+
+
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo vim bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo vim bhp.conf
+
+[20]+  Stopped                 sudo vim bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo vim bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo service nginx start
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo service nginx restart
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo service nginx status
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2020-12-05 19:39:16 UTC; 11s ago
+       Docs: man:nginx(8)
+    Process: 17017 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=1/FAILURE)
+
+Dec 05 19:39:16 ip-172-31-46-35 systemd[1]: Starting A high performance web server and a reverse proxy server...
+Dec 05 19:39:16 ip-172-31-46-35 nginx[17017]: nginx: [emerg] open() "/etc/nginx/sites-enabled/inside" failed (40: Too many levels of symbolic links) in /etc/ng>Dec 05 19:39:16 ip-172-31-46-35 nginx[17017]: nginx: configuration file /etc/nginx/nginx.conf test failed
+Dec 05 19:39:16 ip-172-31-46-35 systemd[1]: nginx.service: Control process exited, code=exited, status=1/FAILURE
+Dec 05 19:39:16 ip-172-31-46-35 systemd[1]: nginx.service: Failed with result 'exit-code'.
+Dec 05 19:39:16 ip-172-31-46-35 systemd[1]: Failed to start A high performance web server and a reverse proxy server.
+lines 1-12/12 (END)
+[21]+  Stopped                 sudo service nginx status
+
+
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo vim bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo service nginx status
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2020-12-05 19:39:16 UTC; 3min 35s ago
+       Docs: man:nginx(8)
+    Process: 17017 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=1/FAILURE)
+
+Dec 05 19:39:16 ip-172-31-46-35 systemd[1]: Starting A high performance web server and a reverse proxy server...
+Dec 05 19:39:16 ip-172-31-46-35 nginx[17017]: nginx: [emerg] open() "/etc/nginx/sites-enabled/inside" failed (40: Too many levels of symbolic links) in /etc/ng>Dec 05 19:39:16 ip-172-31-46-35 nginx[17017]: nginx: configuration file /etc/nginx/nginx.conf test failed
+Dec 05 19:39:16 ip-172-31-46-35 systemd[1]: nginx.service: Control process exited, code=exited, status=1/FAILURE
+Dec 05 19:39:16 ip-172-31-46-35 systemd[1]: nginx.service: Failed with result 'exit-code'.
+Dec 05 19:39:16 ip-172-31-46-35 systemd[1]: Failed to start A high performance web server and a reverse proxy server.
+...skipping...
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2020-12-05 19:39:16 UTC; 3min 35s ago
+       Docs: man:nginx(8)
+    Process: 17017 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=1/FAILURE)
+
+Dec 05 19:39:16 ip-172-31-46-35 systemd[1]: Starting A high performance web server and a reverse proxy server...
+Dec 05 19:39:16 ip-172-31-46-35 nginx[17017]: nginx: [emerg] open() "/etc/nginx/sites-enabled/inside" failed (40: Too many levels of symbolic links) in /etc/ng>Dec 05 19:39:16 ip-172-31-46-35 nginx[17017]: nginx: configuration file /etc/nginx/nginx.conf test failed
+Dec 05 19:39:16 ip-172-31-46-35 systemd[1]: nginx.service: Control process exited, code=exited, status=1/FAILURE
+Dec 05 19:39:16 ip-172-31-46-35 systemd[1]: nginx.service: Failed with result 'exit-code'.
+Dec 05 19:39:16 ip-172-31-46-35 systemd[1]: Failed to start A high performance web server and a reverse proxy server.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-12/12 (END)
+[22]+  Stopped                 sudo service nginx status
+
+
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo service nginx restart
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ cd ../sites-enabled/
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo ln -v -s /etc/nginx/sites-available/bhp.conf inside /etc/nginx/sites-enabled
+ln: failed to create symbolic link '/etc/nginx/sites-enabled/bhp.conf': File exists
+ln: failed to create symbolic link '/etc/nginx/sites-enabled/inside': File exists
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 19:15 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+lrwxrwxrwx 1 root root   35 Dec  5 19:15 bhp.conf -> /etc/nginx/sites-available/bhp.conf
+lrwxrwxrwx 1 root root    6 Dec  5 19:15 inside -> inside
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ less bhp.conf
+
+[23]+  Stopped                 less bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ cd ../sites-available/
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo vin bhp.conf
+sudo: vin: command not found
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo vim bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo service nginx restart
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo vim bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo service nginx restart
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo vim bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ ll
+total 24
+drwxr-xr-x 2 root root 4096 Dec  5 19:50 ./                                                                                                              [ OK ]
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo service nginx status^[[2;5~5~5~5~                                                                       -rw-r--r-- 1 root root 4096 Dec  5 19:23 .bhp.conf.swp
+-rw-r--r-- 1 root root  211 Dec  5 19:47 bhp.conf
+-rw-r--r-- 1 root root 2416 Mar 26  2020 default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo unlink .bhp.conf.swo
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo unlink .bhp.conf.swp
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ ll
+total 16
+drwxr-xr-x 2 root root 4096 Dec  5 19:51 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+-rw-r--r-- 1 root root  211 Dec  5 19:47 bhp.conf
+-rw-r--r-- 1 root root 2416 Mar 26  2020 default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ less bhp.conf
+
+[24]+  Stopped                 less bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo unlink bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ ll
+total 12
+drwxr-xr-x 2 root root 4096 Dec  5 19:53 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+-rw-r--r-- 1 root root 2416 Mar 26  2020 default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ cd ../sites-enabled/
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 19:15 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+lrwxrwxrwx 1 root root   35 Dec  5 19:15 bhp.conf -> /etc/nginx/sites-available/bhp.conf
+lrwxrwxrwx 1 root root    6 Dec  5 19:15 inside -> inside
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo unlink bhp.conf
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 19:53 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+lrwxrwxrwx 1 root root    6 Dec  5 19:15 inside -> inside
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo unlink inside
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ ll
+total 8
+drwxr-xr-x 2 root root 4096 Dec  5 19:54 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx restart
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ sudo service nginx status
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2020-12-05 19:54:46 UTC; 10s ago
+       Docs: man:nginx(8)
+    Process: 17162 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+    Process: 17173 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+   Main PID: 17174 (nginx)
+      Tasks: 2 (limit: 1164)
+     Memory: 2.5M
+     CGroup: /system.slice/nginx.service
+             ├─17174 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+             └─17175 nginx: worker process
+
+Dec 05 19:54:46 ip-172-31-46-35 systemd[1]: Starting A high performance web server and a reverse proxy server...
+Dec 05 19:54:46 ip-172-31-46-35 systemd[1]: Started A high performance web server and a reverse proxy server.
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-enabled$ cd ../sites-available/
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ ll
+total 12
+drwxr-xr-x 2 root root 4096 Dec  5 19:53 ./
+drwxr-xr-x 8 root root 4096 Dec  5 16:15 ../
+-rw-r--r-- 1 root root 2416 Mar 26  2020 default
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo service nginx -t
+Usage: nginx {start|stop|restart|reload|force-reload|status|configtest|rotate|upgrade}
+ubuntu@ip-172-31-46-35:/etc/nginx/sites-available$ sudo service nginx configtest
+ * Testing nginx configuration
+
